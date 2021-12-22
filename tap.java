@@ -1,11 +1,9 @@
 import java.io.*;
 import java.util.*;
 
-
-
 public class tap {
   public static void main(String[] args) throws Exception {
-    FileInputStream fis=new FileInputStream("input.txt");       
+    FileInputStream fis=new FileInputStream("C:\\Users\\Surabhi\\OneDrive\\Desktop\\input.txt");   
     Scanner sc=new Scanner(fis);
     int number_of_employees = Integer.parseInt(sc.nextLine().split(": ")[1]);
  
@@ -24,7 +22,10 @@ public class tap {
       } 
     });
 
-    int min_diff = goodies_items.get(goodies_items.size()-1).price;
+	  
+	  
+	  
+	  int min_diff = goodies_items.get(goodies_items.size()-1).price;
     int min_index = 0;
     for(int i=0;i<goodies_items.size()-number_of_employees+1;i++) {
       int diff = goodies_items.get(number_of_employees+i-1).price-goodies_items.get(i).price;
@@ -37,7 +38,7 @@ public class tap {
     
     
 
-    FileWriter fw = new FileWriter("output.txt");
+    FileWriter fw = new FileWriter("C:\\Users\\Surabhi\\OneDrive\\Desktop\\output.txt");
     fw.write("The goodies selected for distribution are:\n\n");
     for(int i=min_index;i<min_index + number_of_employees; i++) {
       fw.write(goodies_items.get(i).toString() + "\n");
@@ -47,6 +48,10 @@ public class tap {
 	  fw.close();
   }
 }
+
+
+
+
 class Item {
   String name;
   int price;
