@@ -3,12 +3,19 @@ import java.util.*;
 
 public class tap {
   public static void main(String[] args) throws Exception {
+	  
+	  
+	  //For reading streams of characters from text file and pass to java file :  reading hapens here
+	  
     FileInputStream fis=new FileInputStream("C:\\Users\\Surabhi\\OneDrive\\Desktop\\input.txt");   
     Scanner sc=new Scanner(fis);
     int number_of_employees = Integer.parseInt(sc.nextLine().split(": ")[1]);
- 
+	  
+	  //spliting occurs whenever this symbol ": " appears
+	  // after splitting it stores to array 
     ArrayList<Item> goodies_items = new ArrayList<Item>();
-
+	  
+//again when new line encounters in input.txt file, remaining elements appended to array using same split function 
     while(sc.hasNextLine())  
     {
       String current[] = sc.nextLine().split(": ");
@@ -36,7 +43,7 @@ public class tap {
       }
     }
     
-    
+    //writes output on output.txt file
 
     FileWriter fw = new FileWriter("C:\\Users\\Surabhi\\OneDrive\\Desktop\\output.txt");
     fw.write("The goodies selected for distribution are:\n\n");
