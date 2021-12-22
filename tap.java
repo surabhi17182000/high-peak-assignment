@@ -30,7 +30,9 @@ public class tap {
     });
 
 	  
-	  
+	  //input the number of employees
+
+//print the sorted  (according to the difference) resultant array elemets --- from index 0 till index is equal to no of employee
 	  
 	  int min_diff = goodies_items.get(goodies_items.size()-1).price;
     int min_index = 0;
