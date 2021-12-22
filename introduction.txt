@@ -14,3 +14,6 @@ while(i<=no_of_employee)
    print( res[i])
    i++
 }   
+
+
+//writes output on output.txt file
